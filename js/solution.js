@@ -25,10 +25,10 @@
                     islands.push([`${row}${cell}`]);
                     visited.push(`${row}${cell}`);
 
-                    addCellsToIsland(row, cell, "new");
+                    addCellsToIsland(row, cell);
                 }
 
-                function addCellsToIsland(row, cell, src) {
+                function addCellsToIsland(row, cell) {
                     if ( row > 0 && !cellVisited(`${row-1}${cell}`) && map[row-1][cell] ) {
                         addNewCell(`${row-1}${cell}`);
                     }
@@ -54,7 +54,7 @@
                     islands[islands.length-1].push(item);
                     visited.push(item);
 
-                    addCellsToIsland(+item[0], +item[1], "old");
+                    addCellsToIsland(+item[0], +item[1]);
                 }
             }
 
