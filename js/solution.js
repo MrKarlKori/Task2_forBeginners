@@ -12,8 +12,7 @@
     function solution(map) {
         // todo: подсчитать кол-во островов на карте
         let islands = [],
-            visited = [],
-            lastCell = null;
+            visited = [];
 
         for (let row = 0; row < map.length; row++) {
 
@@ -59,7 +58,6 @@
             }
 
         }
-        console.log(islands);
         return islands.length;
     }
 
